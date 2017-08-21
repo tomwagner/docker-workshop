@@ -1,0 +1,29 @@
+# https://github.com/wsargent/docker-cheat-sheet
+
+version: '3.3'
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: app
+    restart: always
+    networks:
+      - exampleNetwork
+    ports:
+        - '8000:8000'
+  mongo:
+    container_name: mongo
+    networks:
+      - exampleNetwork
+    image: mongo:3.4.5
+    ports:
+      - '127.0.0.1:27017:27017'
+    volumes:
+      - './data:/data/db'
+    restart: always
+
+networks:
+  exampleNetwork:
+    external: true

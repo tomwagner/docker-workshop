@@ -5,10 +5,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "echo 'NodeJS version: ' && node -v && echo 'NPM version: ' && npm -v && echo 'Yarn version: ' && yarn --version && node index.js"
+    "start": "nodemon index.js"
   },
   "author": "Tom Wagner",
   "dependencies": {
-    "express": "^4.15.3"
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.7"
   }
 }

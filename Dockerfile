@@ -13,6 +13,9 @@ ADD . .
 # install dependencies
 RUN yarn
 
+# install nodemon for development
+RUN npm install nodemon -g
+
 # port for app
 EXPOSE 8000
 
